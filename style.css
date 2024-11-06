@@ -62,8 +62,6 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: red;
-
 }
 
 
@@ -100,6 +98,7 @@ h3 {
 }
 
 .infoCard {
+   
     background-color: white;
     border-radius: 10px;
 
@@ -124,6 +123,8 @@ h3 {
 
 #tripResult {
     justify-content: flex-start;
+    overflow-y: auto;
+    scrollbar-width: thin;
 }
 
 #searchError{

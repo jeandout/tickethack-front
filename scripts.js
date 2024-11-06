@@ -79,14 +79,14 @@ function bookAction() {
         document.querySelectorAll('input[type="button"][value="Book"]')[i].addEventListener('click',
             function () {
 
-// console.log(this.parentNode.firstElementChild.innerHTML)
-// console.log(this.parentNode.firstElementChild.nextElementSibling.innerHTML)
+                // console.log(this.parentNode.firstElementChild.innerHTML)
+                // console.log(this.parentNode.firstElementChild.nextElementSibling.innerHTML)
                 const data = {
 
                     departure: this.parentNode.firstElementChild.innerHTML,
-                    arrival:this.parentNode.firstElementChild.nextElementSibling.innerHTML,
-                    date:this.parentNode.firstElementChild.nextElementSibling.nextElementSibling.innerHTML,
-                    price:this.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML,
+                    arrival: this.parentNode.firstElementChild.nextElementSibling.innerHTML,
+                    date: this.parentNode.firstElementChild.nextElementSibling.nextElementSibling.innerHTML,
+                    price: this.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML,
 
                 }
 
@@ -101,9 +101,9 @@ function bookAction() {
                 })
                     .then(response => response.json())
                     .then(data => {
-if(data.result == true){
-    window.open('/front/cart.html', '_self');
-}
+                        if (data.result == true) {
+                            window.open('/front/cart.html', '_self');
+                        }
 
                         console.log(data);
                     });
